@@ -1,0 +1,50 @@
+
+
+    <div class="container mt-5">
+  
+            <h3>Game List</h3>
+        
+            <div class="input-group  mt-4">
+                <input type="text" class="form-control" placeholder="search" style="border-radius: 10px; width: 120px;" [(ngModel)]="filteredString">
+
+                <button class="btn btn-primary" style="background-color:aquamarine; margin-left: 850px; border-radius: 50px; width: 150px; height: 50px;" routerLink="app-create">new game</button>
+            </div>
+            
+            <ng-container *ngIf="!showPage">  <!--if game value=0, this area opened -->
+            <div class="mt-5">
+              <table class="table">
+                  <tr> 
+                    <th style="text-align: center;">No records found</th>
+                  </tr>
+              </table>
+            </div>
+            </ng-container> 
+
+            <div class="container">
+            <div class="row" *ngIf="showPage">
+            <ng-container *ngFor="let item of gameList | search : filteredString">
+            <div class="card col-md-3 mt-5 border-0" style="border-radius: 20px;">
+            
+              <img class="card-img-top" src="{{item.chooseFile}}" style="width: 300px; height:300px;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item" id="gameName"><b>Game Name: </b> {{item.gameName}}</li>
+                  <li class="list-group-item" id="bundle"><b> Bundle: </b> {{item.bundle}}</li>
+                  <li class="list-group-item" id="owner"><b> Owner: </b>{{item.owner}} </li>
+                </ul>
+                <button style="background-color: rgba(255, 60, 0, 0.952); border-radius: 50px; color: white;width:100px; height: 30px;" (click)="deleteGame(item.id)">delete</button>
+              </div>  
+            </ng-container>
+            </div>
+            </div>
+            
+            
+
+           
+
+        
+
+    </div>
+
+    
+   
+    

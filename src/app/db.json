@@ -1,0 +1,24 @@
+{
+  "games": [
+    {
+      "gameName": "FIFA 23",
+      "bundle": "fifa23.com",
+      "owner": "easports@info.com",
+      "chooseFile": "C:\\fakepath\\games2.jpg",
+      "id": 2
+    },
+    {
+      "gameName": "FIFA 23",
+      "bundle": "fifa23.com",
+      "owner": "easports@info.com",
+      "chooseFile": "C:\\fakepath\\games2.jpg",
+      "id": 5
+    },
+    {
+      "gameName": "ss",
+      "bundle": "sss",
+      "owner": "deneme@gmail.com",
+      "id": 6
+    }
+  ]
+}
